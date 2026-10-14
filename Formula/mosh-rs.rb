@@ -1,14 +1,15 @@
 class MoshRs < Formula
   desc "Mobile shell (mosh) in Rust: wire-compatible with mosh 1.4, with real scrollback"
   homepage "https://github.com/Arunjay4213/mosh-rs"
-  version "0.1.2"
   license "GPL-3.0-or-later"
 
   on_macos do
     # There is no Intel macOS build.
     depends_on arch: :arm64
-    url "https://github.com/Arunjay4213/mosh-rs/releases/download/v0.1.2/mosh-rs-v0.1.2-aarch64-apple-darwin.tar.gz"
-    sha256 "982295caeb3257f7b6581468cdb5450891db9a716408de7eb44c049e76702d5d"
+    on_arm do
+      url "https://github.com/Arunjay4213/mosh-rs/releases/download/v0.1.2/mosh-rs-v0.1.2-aarch64-apple-darwin.tar.gz"
+      sha256 "982295caeb3257f7b6581468cdb5450891db9a716408de7eb44c049e76702d5d"
+    end
   end
 
   on_linux do
