@@ -7,19 +7,19 @@ class MoshRs < Formula
     # There is no Intel macOS build.
     depends_on arch: :arm64
     on_arm do
-      url "https://github.com/Arunjay4213/mosh-rs/releases/download/v0.1.2/mosh-rs-v0.1.2-aarch64-apple-darwin.tar.gz"
-      sha256 "982295caeb3257f7b6581468cdb5450891db9a716408de7eb44c049e76702d5d"
+      url "https://github.com/Arunjay4213/mosh-rs/releases/download/v0.1.3/mosh-rs-v0.1.3-aarch64-apple-darwin.tar.gz"
+      sha256 "5e00f02021a80f4b64889826153424474d0791121f839d04baf7cdf8fdc82ad4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/Arunjay4213/mosh-rs/releases/download/v0.1.2/mosh-rs-v0.1.2-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "00331e3e24586752639bb4ac628ce77a65bc452656b239b3b7a840fef89f615a"
+      url "https://github.com/Arunjay4213/mosh-rs/releases/download/v0.1.3/mosh-rs-v0.1.3-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "06d913a0c10405aa48c11f48bcbe57e539ade907b679372f4cc725e5c51efe72"
     end
     on_intel do
-      url "https://github.com/Arunjay4213/mosh-rs/releases/download/v0.1.2/mosh-rs-v0.1.2-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "936f78fdfdc2a479d7c10a8eb2675ec45ce793792d8d58872b2501f1dd5afe27"
+      url "https://github.com/Arunjay4213/mosh-rs/releases/download/v0.1.3/mosh-rs-v0.1.3-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "58253ac8e0601ff1979c8b03e7dce05cf28cce4d4840dd562132406e5c5b8f94"
     end
   end
 
@@ -30,7 +30,7 @@ class MoshRs < Formula
   end
 
   test do
-    assert_match "mosh-rs 0.1.2", shell_output("#{bin}/mosh --version")
-    assert_match "mosh-rs 0.1.2", shell_output("#{bin}/mosh-client --version")
+    assert_match "mosh-rs 0.1.3", shell_output("#{bin}/mosh --version")
+    assert_match "mosh-rs 0.1.3", shell_output("#{bin}/mosh-client --version")
   end
 end
